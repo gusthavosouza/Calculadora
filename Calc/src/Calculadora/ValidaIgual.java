@@ -16,7 +16,7 @@ public class ValidaIgual {
     public String valida(String texto){
      JTextArea texo = new JTextArea();
         String text = String.valueOf(texto.length());
-       String linhas [] = texto.split("\n");
+       String linhas [] = texto.split(" ");
        String num1 = linhas[0];
        String num2 = linhas[2];
        

@@ -7,6 +7,11 @@ Utilizando NetBeans como Ide de Desenvolvimento, e muita pesquisa no google.
 
 -Jar para execução no diretorio Calc/dist 
 
+Para execução na Ide Eclipse :
+Criar um projeto java, importar o projeto Calculadora, e adicionar o jar AbsoluteLayout.jar que se encontra no 
+diretorio : Calculadora/Calc/dist/lib contendo o arquivo AbsoluteLayout.jar as livrarias do projeto.
+
+
 Calculadora ainda contando apenas com operadoções de 2 numeros
 
 Ex: 10 + 20 = 30

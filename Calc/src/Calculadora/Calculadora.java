@@ -6,16 +6,13 @@ package Calc.src.Calculadora;
 
 import java.awt.event.KeyEvent;
 
-import javax.swing.JOptionPane;
-import javax.swing.JViewport;
-
 /**
  * 
  * @author Gustavo
  * 
  */
 public class Calculadora extends javax.swing.JFrame {
- /*
+	/*
 	 * Metodo para apagar apenas um caracter por vez, ao precionar o botao
 	 * "BackSpace"
 	 */
@@ -47,9 +44,7 @@ public class Calculadora extends javax.swing.JFrame {
 		double a = Double.parseDouble(num);
 		return a;
 
-		}
-
-	
+	}
 
 	/*
 	 * Metodo responsavel para validar se a string tem . e fazer um cast para
@@ -413,12 +408,12 @@ public class Calculadora extends javax.swing.JFrame {
 	private void jButtonIgualActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jButtonIgualActionPerformed
 		// TODO add your handling code here:
 		/*
-		 * Umas das partes mais legais que achei em desenvolver a
-		 * calculadora, foi obter os numeros digitados e separalos, em um
-		 * array e assim pode efetuar a operaÃ§Ã£o correta, mas ainda esta
-		 * faltando algo pois ainda sÃ³ conseguimos, fazer operaÃ§Ãµes de 2
-		 * numeros Ex: 10 + 20 e assim obtendo o resultado, esperando ainda
-		 * conseguir fazer 10 + 20 + 30 - 40 . etc
+		 * Umas das partes mais legais que achei em desenvolver a calculadora,
+		 * foi obter os numeros digitados e separalos, em um array e assim pode
+		 * efetuar a operaÃ§Ã£o correta, mas ainda esta faltando algo pois ainda
+		 * sÃ³ conseguimos, fazer operaÃ§Ãµes de 2 numeros Ex: 10 + 20 e assim
+		 * obtendo o resultado, esperando ainda conseguir fazer 10 + 20 + 30 -
+		 * 40 . etc
 		 */
 		String tex = jVisor.getText();
 		String textt = String.valueOf(tex.length());
@@ -431,51 +426,51 @@ public class Calculadora extends javax.swing.JFrame {
 
 		for (int i = 0; i < linhas.length; i++) {
 			if (linhas[i].equals("+")) {
-				
-				if(num1.contains(".")|num2.contains(".")){
+
+				if (num1.contains(".") | num2.contains(".")) {
 					double numd = validaDouble(num1);
 					double numd2 = validaDouble(num2);
 					double result = numd + numd2;
 					String res = String.valueOf(result);
 					jVisor.setText(res);
-				}else{
+				} else {
 					long a = validaLong(num1);
 					long b = validaLong(num2);
 					long result = a + b;
 					String res = String.valueOf(result);
 					jVisor.setText(res);
-			}
+				}
 			}
 
 			if (linhas[i].equals("*")) {
-				if(num1.contains(".")|num2.contains(".")){
+				if (num1.contains(".") | num2.contains(".")) {
 					double numd = validaDouble(num1);
 					double numd2 = validaDouble(num2);
 					double result = numd * numd2;
 					String res = String.valueOf(result);
 					jVisor.setText(res);
-				}else{
+				} else {
 					long a = validaLong(num1);
 					long b = validaLong(num2);
 					long result = a * b;
 					String res = String.valueOf(result);
 					jVisor.setText(res);
-			}
+				}
 			}
 			if (linhas[i].equals("-")) {
-				if(num1.contains(".")|num2.contains(".")){
+				if (num1.contains(".") | num2.contains(".")) {
 					double numd = validaDouble(num1);
 					double numd2 = validaDouble(num2);
 					double result = numd - numd2;
 					String res = String.valueOf(result);
 					jVisor.setText(res);
-				}else{
+				} else {
 					long a = validaLong(num1);
 					long b = validaLong(num2);
 					long result = a - b;
 					String res = String.valueOf(result);
 					jVisor.setText(res);
-			}
+				}
 			}
 			if (linhas[i].equals("/")) {
 
@@ -483,22 +478,21 @@ public class Calculadora extends javax.swing.JFrame {
 				String nume = String.valueOf(num2);
 				double a = Double.parseDouble(num);
 				double b = Double.parseDouble(nume);
-				try{
-					if(a==0|b==0){
-						
+				try {
+					if (a == 0 | b == 0) {
+
 						jVisor.setText("Divisor nao pode ser 0");
-					}else{
+					} else {
 						double result = a / b;
 
-					String res = String.valueOf(result);
-					jVisor.setText(res);
-						
+						String res = String.valueOf(result);
+						jVisor.setText(res);
+
 					}
-					}catch(Exception e){
-						e.printStackTrace();
-					
-					}
-			
+				} catch (Exception e) {
+					e.printStackTrace();
+
+				}
 
 			}
 		}
@@ -567,43 +561,43 @@ public class Calculadora extends javax.swing.JFrame {
 			String texto = jVisor.getText();
 			jVisor.setText(texto + " * ");
 		}
-		if (evt.getKeyCode() == KeyEvent.VK_NUMPAD1) {
+		if (evt.getKeyCode() == KeyEvent.VK_NUMPAD1 | evt.getKeyCode() == KeyEvent.VK_1) {
 			String texto = jVisor.getText();
 			jVisor.setText(texto + "1");
 		}
-		if (evt.getKeyCode() == KeyEvent.VK_NUMPAD0) {
+		if (evt.getKeyCode() == KeyEvent.VK_NUMPAD0 | evt.getKeyCode() == KeyEvent.VK_0) {
 			String texto = jVisor.getText();
 			jVisor.setText(texto + "0");
 		}
-		if (evt.getKeyCode() == KeyEvent.VK_NUMPAD2) {
+		if (evt.getKeyCode() == KeyEvent.VK_NUMPAD2 | evt.getKeyCode() == KeyEvent.VK_2) {
 			String texto = jVisor.getText();
 			jVisor.setText(texto + "2");
 		}
-		if (evt.getKeyCode() == KeyEvent.VK_NUMPAD3) {
+		if (evt.getKeyCode() == KeyEvent.VK_NUMPAD3 | evt.getKeyCode() == KeyEvent.VK_3) {
 			String texto = jVisor.getText();
 			jVisor.setText(texto + "3");
 		}
-		if (evt.getKeyCode() == KeyEvent.VK_NUMPAD4) {
+		if (evt.getKeyCode() == KeyEvent.VK_NUMPAD4 | evt.getKeyCode() == KeyEvent.VK_4) {
 			String texto = jVisor.getText();
 			jVisor.setText(texto + "4");
 		}
-		if (evt.getKeyCode() == KeyEvent.VK_NUMPAD5) {
+		if (evt.getKeyCode() == KeyEvent.VK_NUMPAD5 | evt.getKeyCode() == KeyEvent.VK_5) {
 			String texto = jVisor.getText();
 			jVisor.setText(texto + "5");
 		}
-		if (evt.getKeyCode() == KeyEvent.VK_NUMPAD6) {
+		if (evt.getKeyCode() == KeyEvent.VK_NUMPAD6 | evt.getKeyCode() == KeyEvent.VK_6) {
 			String texto = jVisor.getText();
 			jVisor.setText(texto + "6");
 		}
-		if (evt.getKeyCode() == KeyEvent.VK_NUMPAD7) {
+		if (evt.getKeyCode() == KeyEvent.VK_NUMPAD7 | evt.getKeyCode() == KeyEvent.VK_7) {
 			String texto = jVisor.getText();
 			jVisor.setText(texto + "7");
 		}
-		if (evt.getKeyCode() == KeyEvent.VK_NUMPAD8) {
+		if (evt.getKeyCode() == KeyEvent.VK_NUMPAD8 | evt.getKeyCode() == KeyEvent.VK_8) {
 			String texto = jVisor.getText();
 			jVisor.setText(texto + "8");
 		}
-		if (evt.getKeyCode() == KeyEvent.VK_NUMPAD9) {
+		if (evt.getKeyCode() == KeyEvent.VK_NUMPAD9 | evt.getKeyCode() == KeyEvent.VK_9) {
 			String texto = jVisor.getText();
 			jVisor.setText(texto + "9");
 		}
@@ -620,7 +614,7 @@ public class Calculadora extends javax.swing.JFrame {
 			jVisor.setText(texto + ".");
 		}
 
-		if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+		if (evt.getKeyCode() == KeyEvent.VK_ENTER | evt.getKeyCode() == KeyEvent.VK_EQUALS) {
 			/*
 			 * Umas das partes mais legais que achei em desenvolver a
 			 * calculadora, foi obter os numeros digitados e separalos, em um
@@ -640,51 +634,51 @@ public class Calculadora extends javax.swing.JFrame {
 
 			for (int i = 0; i < linhas.length; i++) {
 				if (linhas[i].equals("+")) {
-					
-					if(num1.contains(".")|num2.contains(".")){
+
+					if (num1.contains(".") | num2.contains(".")) {
 						double numd = validaDouble(num1);
 						double numd2 = validaDouble(num2);
 						double result = numd + numd2;
 						String res = String.valueOf(result);
 						jVisor.setText(res);
-					}else{
+					} else {
 						long a = validaLong(num1);
 						long b = validaLong(num2);
 						long result = a + b;
 						String res = String.valueOf(result);
 						jVisor.setText(res);
-				}
+					}
 				}
 
 				if (linhas[i].equals("*")) {
-					if(num1.contains(".")|num2.contains(".")){
+					if (num1.contains(".") | num2.contains(".")) {
 						double numd = validaDouble(num1);
 						double numd2 = validaDouble(num2);
 						double result = numd * numd2;
 						String res = String.valueOf(result);
 						jVisor.setText(res);
-					}else{
+					} else {
 						long a = validaLong(num1);
 						long b = validaLong(num2);
 						long result = a * b;
 						String res = String.valueOf(result);
 						jVisor.setText(res);
-				}
+					}
 				}
 				if (linhas[i].equals("-")) {
-					if(num1.contains(".")|num2.contains(".")){
+					if (num1.contains(".") | num2.contains(".")) {
 						double numd = validaDouble(num1);
 						double numd2 = validaDouble(num2);
 						double result = numd - numd2;
 						String res = String.valueOf(result);
 						jVisor.setText(res);
-					}else{
+					} else {
 						long a = validaLong(num1);
 						long b = validaLong(num2);
 						long result = a - b;
 						String res = String.valueOf(result);
 						jVisor.setText(res);
-				}
+					}
 				}
 				if (linhas[i].equals("/")) {
 
@@ -692,22 +686,21 @@ public class Calculadora extends javax.swing.JFrame {
 					String nume = String.valueOf(num2);
 					double a = Double.parseDouble(num);
 					double b = Double.parseDouble(nume);
-					try{
-						if(a==0|b==0){
-							
+					try {
+						if (a == 0 | b == 0) {
+
 							jVisor.setText("Divisor nao pode ser 0");
-						}else{
+						} else {
 							double result = a / b;
 
-						String res = String.valueOf(result);
-						jVisor.setText(res);
-							
+							String res = String.valueOf(result);
+							jVisor.setText(res);
+
 						}
-						}catch(Exception e){
-							e.printStackTrace();
-						
-						}
-				
+					} catch (Exception e) {
+						e.printStackTrace();
+
+					}
 
 				}
 			}

@@ -12,11 +12,13 @@ Criar um projeto java, importar o projeto Calculadora, e adicionar o jar Absolut
 diretorio : Calculadora/Calc/dist/lib contendo o arquivo AbsoluteLayout.jar as livrarias do projeto.
 
 
-Calculadora ainda contando apenas com operadoções de 2 numeros
+Calculadora ainda contando apenas com operações de 2 numeros
 
 Ex: 10 + 20 = 30
 Ex: 30 * 44 = 1320
 Ex: 25 / 2 = 12.5
 Ex: 50 - 600 = - 550
-
-
+ e numeros decimais,
+ 
+ Ex : 10.3621 + 30.3624 = 40.7245
+ etc

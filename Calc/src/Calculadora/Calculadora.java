@@ -348,7 +348,12 @@ public class Calculadora extends javax.swing.JFrame {
 
     private void jButtonIgualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonIgualActionPerformed
         // TODO add your handling code here:
-
+/*
+*Umas das partes mais legais que achei em desenvolver a calculadora, foi obter os numeros digitados e separalos, em um array
+* e assim pode efetuar a operação correta, mas ainda esta faltando algo pois ainda só conseguimos, 
+* fazer operações de 2 numeros Ex:  10 + 20  e assim obtendo o resultado, esperando ainda conseguir fazer
+* 10 + 20 + 30 - 40 . etc
+*/
         String tex = jVisor.getText();
         String text = String.valueOf(tex.length());
         String linhas[] = tex.split(" ");
@@ -442,61 +447,7 @@ public class Calculadora extends javax.swing.JFrame {
         jVisor.setText(texto + ".");
     }//GEN-LAST:event_jButton11ActionPerformed
 
-    private void jButtonIgualKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButtonIgualKeyPressed
-        // TODO add your handling code here:
-        
-        String tex = jVisor.getText();
-        String text = String.valueOf(tex.length());
-        String linhas[] = tex.split(" ");
-        for (String a : linhas) {
-        }
-        //for(int a = 0; a < linhas.length;a++){
-        //    if(linhas[a]!= " "){
-        //      String numeros = linhas[a];
-        //    System.out.println(numeros += numeros+linhas[a]);
-        //}
-        // }
-        String num1 = linhas[0];
-        String num2 = linhas[2];
-
-        for (int i = 0; i < linhas.length; i++) {
-            if (linhas[i].equals("+")) {
-                long a = validaLong(num1);
-                long b = validaLong(num2);
-                long result = a + b;
-                String res = String.valueOf(result);
-                jVisor.setText(res);
-            }
-
-            if (linhas[i].equals("*")) {
-                long a = validaLong(num1);
-                long b = validaLong(num2);
-                long result = a * b;
-                String res = String.valueOf(result);
-                jVisor.setText(res);
-            }
-            if (linhas[i].equals("-")) {
-                long a = validaLong(num1);
-                long b = validaLong(num2);
-                long result = a - b;
-                String res = String.valueOf(result);
-                jVisor.setText(res);
-            }
-            if (linhas[i].equals("/")) {
-
-                String num = String.valueOf(num1);
-                String nume = String.valueOf(num2);
-                double a = Double.parseDouble(num);
-                double b = Double.parseDouble(nume);
-
-                double result = a / b;
-
-                String res = String.valueOf(result);
-                jVisor.setText(res);
-            }
-        }
-
-    }//GEN-LAST:event_jButtonIgualKeyPressed
+    
 
     private void jButtonSubActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSubActionPerformed
         // TODO add your handling code here:
@@ -578,6 +529,12 @@ public class Calculadora extends javax.swing.JFrame {
         }
 
         if (evt.getExtendedKeyCode() == KeyEvent.VK_ENTER) {
+            /*
+*Umas das partes mais legais que achei em desenvolver a calculadora, foi obter os numeros digitados e separalos, em um array
+* e assim pode efetuar a operação correta, mas ainda esta faltando algo pois ainda só conseguimos, 
+* fazer operações de 2 numeros Ex:  10 + 20  e assim obtendo o resultado, esperando ainda conseguir fazer
+* 10 + 20 + 30 - 40 . etc
+*/
             String tex = jVisor.getText();
             String textt = String.valueOf(tex.length());
             String linhas[] = tex.split(" ");

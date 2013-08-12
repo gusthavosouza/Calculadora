@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package Calculadora;
+ package Calc.src.Calculadora;
 
 
 import java.awt.event.KeyEvent;
